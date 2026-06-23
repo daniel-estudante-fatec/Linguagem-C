@@ -1,0 +1,43 @@
+/* FUNÇÃO QUE CHAMA FUNÇÃO
+ Atenção as chaves para enender...
+ NUMERO ABSOLUTO
+*/
+#include <stdio.h>
+
+int main()
+{
+    
+    float somaDeDigitos(float n1, float n2);
+    float a, b, soma;
+    
+    printf("Digite dois numeros:\n");
+    scanf("%f ", &a);
+      scanf("%f", &b);
+      
+    soma = somaDeDigitos(a, b);
+    
+    printf ("A soma é: %.2f ", soma);
+    
+    
+    return 0;
+}
+
+ float somaDeDigitos(float num1, float num2)
+ {
+     float valorAbsoluto (float x);
+     
+     if (num1 < 0){
+         num1 = valorAbsoluto(num1);
+     }
+     if (num2 < 0){
+         num2 = valorAbsoluto(num2);
+     }
+     
+     return num1 + num2;
+ }
+ 
+ float valorAbsoluto (float x){
+     
+     return x * -1;
+     
+ }
